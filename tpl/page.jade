@@ -1,0 +1,17 @@
+doctype
+html
+	head
+		title= "Ghettoest real time web chat"
+		script(src='/chat.js')
+		script(src='/socket.io/socket.io.js')
+	body
+		img(id='logo', class='logo-img', src='http://localhost:3700/img/flawduck-logo.png')
+		div#wrapper
+			#content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll; display: inline-block;')
+			#user-screen(style='width: 250px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll; display: inline-block;')
+			.controls
+				| Name: 
+				input#name(style='width:350px;')
+				br
+				input#field(style='width:350px;')
+				input#send(type='button', value='send')
